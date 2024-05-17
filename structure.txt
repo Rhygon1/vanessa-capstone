@@ -1,0 +1,58 @@
+Class 1:
+    Class Name: Schedule
+    Properties:
+        Name of person: name of the person
+        ? Maybe grade
+        ? Maybe student ID
+        Classes: An arraylist of their Classes
+    Methods:
+        Initiator method:
+            Takes all arguments except the classes and makes the class
+        Add class:
+            Take a class object (class for this object defined next) and adds it to their classes
+            Returns the class object added
+        Remove class:
+            Takes class name and removes it from their classes
+            Returns the class object removed
+        Sort:
+            Sorts classes based on amount of assignments
+            Returns this.classes
+        Print:
+            Prints out the schedule in a neat way, maybe like a table with classes as columns and their assignments sorted
+            No return I dont think
+
+
+Class 2:
+    Class Name: Class
+    Properties:
+        Class_name: English/math/bio
+        Block: A/B/C/D
+        Semester: 1/2Q
+        Assignments: an arraylist
+    Methods:
+        Initiator method:
+            Takes the first three properties and makes the object
+        Add_assignment:
+            Takes an assignment class (Defined later) and adds to the arraylist
+            Calls the sort() method defined on this class later
+            Returns added assignment
+        Complete_assignment:
+            Takes an assignment ID (ID which we can define in the assignment class later) and removes it
+            Calls the sort() method defined on this class later
+            Returns completed assignment
+        Sort:
+            Sorts the assignments in order of due date
+            Returns this.assignments
+
+
+Class 3:
+    Class name: Assignment
+    Properties:
+        Name: name of the assignment
+        Due date: due date of the assignment
+        ID: A randomly generated ID for the assignment
+    Methods:
+        Initiator method:
+            Takes the name and the due date and also which class its for
+            Makes the first two properties and calls the Add_assignment method on the class with this object as the argument to it
+
